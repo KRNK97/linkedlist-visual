@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./linked.js"></script>
+    <style>
+        .controls{
+            min-height: 100px;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            min-width: 100%;
+        }
+
+        .buttons-container button{
+            font-size: 10px;
+        }
+
+        .form-control{
+            font-size: 10px;
+            max-width: 200px;
+        }
+
+        .node{
+            height: 30px;
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row preview border rounded p-4" style="min-height: 300px;">
+
+        </div>
+        <div class="row controls bg-dark p-4">
+            <p class="text-muted w-100 border-bottom mb-4 small">C o n t r o l s</p>
+            <div class="col-12">
+                <p class="text-muted w-100 m-0 small text-center">CHOOSE AN OPERATION</p>
+                
+                <div class="buttons-container d-flex mt-2 justify-content-between">
+                    <button class="btn btn-outline-success btn-sm control-btn" id="ap">Append Element</button>
+                    <button class="btn btn-outline-success btn-sm control-btn" id="pp">Prepend Element</button>
+                    <button class="btn btn-outline-danger btn-sm control-btn" id="dv">Delete Element (based on value)</button>
+                    <button class="btn btn-outline-danger btn-sm control-btn" id="di">Delete Element (based on index)</button>
+                    <button class="btn btn-outline-primary btn-sm control-btn" id="in">Insert Element (insert after a node)</button>
+                    <button class="btn btn-outline-primary btn-sm control-btn" id="ii">Insert Element (insert at an index)</button>
+                </div>
+                
+            </div>
+            <div class="col-12">
+                <div class="mt-4 data-input-container" style="display: none;">
+                    <input type="text" class="form-control p-2 m-0 data-input" placeholder="Enter The Data Value . . ." >
+                    <button class="btn btn-success btn-sm ms-2" id="go">GO!</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
